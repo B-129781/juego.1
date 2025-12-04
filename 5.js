@@ -201,7 +201,7 @@ btnVolverCreditos.addEventListener("click", volverAlMenu);
 btnMenuDesdeJuego.addEventListener("click", volverAlMenuDesdeJuego);
 
 function iniciarJuego() {
-  console.log("🎮 Iniciando juego...");
+  console.log(" Iniciando juego...");
   
   detenerMusicaMenu();
   
@@ -222,7 +222,7 @@ function iniciarJuego() {
   
   if (!juegoIniciado) {
     juegoIniciado = true;
-    console.log("🔄 Loop de animación iniciado");
+    console.log(" Loop de animación iniciado");
     requestAnimationFrame(animar);
   }
   
@@ -604,4 +604,5 @@ console.log("Controles: A/D, 1 Arma, F Disparar, R Recargar, E Hablar, W Saltar"
 console.log(" Presiona 3 para congelar enemigos por 10 segundos");
 
 console.log(" Presiona E cerca del NPC para hablar");
+
 
