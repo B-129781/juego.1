@@ -91,7 +91,7 @@ function recibirDañoJugador() {
   if (invulnerable || vidaActual <= 0) return;
 
   vidaActual--;
-  console.log(`💔 El jugador recibió daño! Vida: ${vidaActual}/${vidaMaxima}`);
+  console.log(` El jugador recibió daño! Vida: ${vidaActual}/${vidaMaxima}`);
 
   audioDañoJugador.currentTime = 0;
   audioDañoJugador.play().catch(() => {});
@@ -124,12 +124,12 @@ function recibirDañoJugador() {
 // ============================================
 function curarJugador(cantidad = 1) {
   if (vidaActual >= vidaMaxima) {
-    console.log("💚 Vida completa!");
+    console.log(" Vida completa!");
     return;
   }
 
   vidaActual = Math.min(vidaActual + cantidad, vidaMaxima);
-  console.log(`💚 Curado! Vida: ${vidaActual}/${vidaMaxima}`);
+  console.log(` Curado! Vida: ${vidaActual}/${vidaMaxima}`);
   
   player.style.filter = "brightness(1.5) sepia(0.3) hue-rotate(90deg)";
   setTimeout(() => {
@@ -143,9 +143,9 @@ function curarJugador(cantidad = 1) {
 // MUERTE DEL JUGADOR
 // ============================================
 function morirJugador() {
-  console.log("💀 EL JUGADOR HA MUERTO");
+  console.log(" EL JUGADOR HA MUERTO");
   
-  // 🔴 DETENER MÚSICA DEL JEFE
+  //  DETENER MÚSICA DEL JEFE
   if (typeof audioAparicionJefe !== 'undefined') {
     audioAparicionJefe.pause();
     audioAparicionJefe.currentTime = 0;
@@ -199,7 +199,7 @@ function mostrarPantallaGameOver() {
   mensaje.style.color = "#FFFFFF";
   mensaje.style.marginBottom = "2rem";
   
-  // 🎬 CONTENEDOR DE VIDEO
+  //  CONTENEDOR DE VIDEO
   const videoContainer = document.createElement("div");
   videoContainer.style.width = "640px";
   videoContainer.style.height = "360px";
@@ -224,7 +224,7 @@ function mostrarPantallaGameOver() {
   video.appendChild(source);
   videoContainer.appendChild(video);
   
-  // ❌ SOLO BOTÓN DE REINTENTAR (Sin botón de menú)
+  //  SOLO BOTÓN DE REINTENTAR (Sin botón de menú)
   const botonReintentar = document.createElement("button");
   botonReintentar.textContent = "REINTENTAR";
   botonReintentar.className = "boton-menu";
@@ -278,7 +278,7 @@ function inicializarSistemaVida() {
   vidaActual = vidaMaxima;
   invulnerable = false;
   crearInterfazVida();
-  console.log("💚 Sistema de vida inicializado: " + vidaMaxima + " corazones");
+  console.log(" Sistema de vida inicializado: " + vidaMaxima + " corazones");
 }
 
 // ============================================
@@ -293,7 +293,8 @@ function limpiarSistemaVida() {
   invulnerable = false;
 }
 
-console.log("❤️ Sistema de vida con corazones cargado");
-console.log("💚 Vida máxima: " + vidaMaxima + " corazones");
+console.log("Sistema de vida con corazones cargado");
+console.log("Vida máxima: " + vidaMaxima + " corazones");
 
-console.log("🎬 Video de muerte activado");
+console.log(" Video de muerte activado");
+
