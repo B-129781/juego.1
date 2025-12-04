@@ -228,17 +228,17 @@ function iniciarJuego() {
   
   actualizarContadorBalas();
   
-  // 💚 INICIALIZAR SISTEMA DE VIDA
-  console.log("💚 Intentando inicializar sistema de vida...");
+  //  INICIALIZAR SISTEMA DE VIDA
+  console.log(" Intentando inicializar sistema de vida...");
   if (typeof inicializarSistemaVida !== 'undefined') {
     inicializarSistemaVida();
-    console.log("✅ Sistema de vida inicializado correctamente");
+    console.log(" Sistema de vida inicializado correctamente");
   } else {
-    console.error("❌ ERROR: inicializarSistemaVida no está definida");
+    console.error(" ERROR: inicializarSistemaVida no está definida");
     console.error("Verifica que 7.js esté cargado en el HTML");
   }
   
-  console.log("✅ Juego listo - Presiona E para hablar con el NPC");
+  console.log(" Juego listo - Presiona E para hablar con el NPC");
 }
 
 function mostrarCreditos() {
@@ -265,7 +265,7 @@ function volverAlMenu() {
     limpiarNPC();
   }
   
-  // 💚 LIMPIAR SISTEMA DE VIDA
+  //  LIMPIAR SISTEMA DE VIDA
   if (typeof limpiarSistemaVida !== 'undefined') {
     limpiarSistemaVida();
   }
@@ -297,14 +297,14 @@ function actualizarContadorBalas() {
   
   if (conArma) {
     if (recargando) {
-      contador.textContent = "🔄 RECARGANDO...";
+      contador.textContent = " RECARGANDO...";
       contador.style.color = "#FFA500";
     } else {
       if (balasActuales === 1) {
-        contador.textContent = `🐴 CABALLO LISTO: ${balasActuales}/${balasMaximas}`;
+        contador.textContent = ` CABALLO LISTO: ${balasActuales}/${balasMaximas}`;
         contador.style.color = "#FFD700";
       } else {
-        contador.textContent = `🔫 BALAS: ${balasActuales}/${balasMaximas}`;
+        contador.textContent = ` BALAS: ${balasActuales}/${balasMaximas}`;
         contador.style.color = balasActuales === 0 ? "#FF0000" : "#FFD700";
       }
     }
@@ -350,7 +350,7 @@ function disparar() {
   if (esUltimaBala) {
     audioRelincho.currentTime = 0;
     audioRelincho.play();
-    console.log("🐴 ¡RELINCHOOOO!");
+    console.log(" ¡RELINCHOOOO!");
   } else {
     audioDisparo.currentTime = 0;
     audioDisparo.play();
@@ -366,7 +366,7 @@ function disparar() {
     proyectil.style.zIndex = "15";
     proyectil.style.imageRendering = "pixelated";
     proyectil.classList.add("caballo-proyectil");
-    console.log("🐴 Disparo de CABALLO");
+    console.log(" Disparo de CABALLO");
   } else {
     proyectil.classList.add("bala");
   }
@@ -535,7 +535,7 @@ document.addEventListener("keydown", function(e) {
     
     actualizarContadorBalas();
     
-    // 💚 ACTUALIZAR CORAZONES
+    // ACTUALIZAR CORAZONES
     if (typeof actualizarCorazones !== 'undefined') {
       actualizarCorazones();
     }
@@ -550,7 +550,7 @@ document.addEventListener("keydown", function(e) {
   if (key === "3") {
     if (typeof congelarEnemigos !== 'undefined') {
       congelarEnemigos();
-      console.log("❄️ ¡CONGELANDO ENEMIGOS!");
+      console.log(" ¡CONGELANDO ENEMIGOS!");
     }
   }
   
@@ -583,7 +583,7 @@ document.addEventListener("keyup", function(e) {
 // ============================================
 function iniciarMusicaMenu() {
   musicaMenu.play().catch(error => {
-    console.log("🎵 La música necesita interacción del usuario para reproducirse");
+    console.log("La música necesita interacción del usuario para reproducirse");
   });
 }
 
@@ -599,8 +599,9 @@ document.addEventListener("click", function iniciarAudio() {
   document.removeEventListener("click", iniciarAudio);
 }, { once: true });
 
-console.log("🎮 THE LAST SHERIFF - Juego cargado correctamente");
-console.log("🎯 Controles: A/D, 1 Arma, F Disparar, R Recargar, E Hablar, W Saltar");
-console.log("❄️ Presiona 3 para congelar enemigos por 10 segundos");
+console.log(" THE LAST SHERIFF - Juego cargado correctamente");
+console.log("Controles: A/D, 1 Arma, F Disparar, R Recargar, E Hablar, W Saltar");
+console.log(" Presiona 3 para congelar enemigos por 10 segundos");
 
-console.log("💬 Presiona E cerca del NPC para hablar");
+console.log(" Presiona E cerca del NPC para hablar");
+
