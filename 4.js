@@ -175,7 +175,7 @@ function interactuarConNPC() {
       // Primera misión  15 enemigos
       mostrarDialogo(
         "El Ultimo sobreviviente ",
-        "¡HEY viajero No hay nada que hacer Aqui! Los bandidos Mataron a todos atacando el pueblo hace dias atras soy el que sobrevivio  pedimos ayuda al gobierno y nos dejaron a nuestra suerte \n\n MISIÓN: Elimina a los  15  bandidos que mataron a todos \n\n IMPORTANTE Los  bandidos estan en grupos de 5 escondidos en las casas",
+        "Con 1 sacas el arma ,  Con F disparas ,  Con Espacio o con W saltas para esquivar las balas  \n\n ¡HEY viajero No hay nada que hacer Aqui! Los bandidos Mataron a todos atacando el pueblo hace dias atras soy el que sobrevivio  pedimos ayuda al gobierno y nos dejaron a nuestra suerte \n\n MISIÓN: Elimina a los  15  bandidos que mataron a todos \n\n IMPORTANTE Los  bandidos estan en grupos de 5 escondidos en las casas",
         true,
         iniciarMision
       );
@@ -326,4 +326,5 @@ document.head.appendChild(styleNPC);
 
 console.log(" Sistema de NPC simple cargado");
 console.log(" Presiona E para hablar con el NPC");
+
 console.log(" Sistema de invocación del jefe integrado");
