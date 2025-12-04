@@ -218,7 +218,7 @@ function mostrarPantallaGameOver() {
   
   const source = document.createElement("source");
   // 👇 CAMBIA ESTE NOMBRE POR TU VIDEO DE MUERTE
-  source.src = "pipipipixD.MP4"; // ← Pon aquí el nombre de tu video
+  source.src = "pipipipixD.mp4"; // ← Pon aquí el nombre de tu video
   source.type = "video/MP4";
   
   video.appendChild(source);
@@ -295,4 +295,5 @@ function limpiarSistemaVida() {
 
 console.log("❤️ Sistema de vida con corazones cargado");
 console.log("💚 Vida máxima: " + vidaMaxima + " corazones");
+
 console.log("🎬 Video de muerte activado");
