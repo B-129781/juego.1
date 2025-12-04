@@ -193,7 +193,7 @@ function mostrarPantallaGameOver() {
   titulo.style.animation = "pulse 1s infinite";
   
   const mensaje = document.createElement("p");
-  mensaje.textContent = "El sheriff ha caído...";
+  mensaje.textContent = "Qué mal, murió de la forma más manca posible. Está fácil el juego ";
   mensaje.style.fontFamily = "'Press Start 2P', cursive";
   mensaje.style.fontSize = "1.2rem";
   mensaje.style.color = "#FFFFFF";
@@ -217,7 +217,7 @@ function mostrarPantallaGameOver() {
   video.autoplay = true;
   
   const source = document.createElement("source");
-  // 👇 CAMBIA ESTE NOMBRE POR TU VIDEO DE MUERTE
+  //  CAMBIA ESTE NOMBRE POR TU VIDEO DE MUERTE
   source.src = "pipipipixD.mp4"; // ← Pon aquí el nombre de tu video
   source.type = "video/MP4";
   
@@ -226,7 +226,7 @@ function mostrarPantallaGameOver() {
   
   //  SOLO BOTÓN DE REINTENTAR (Sin botón de menú)
   const botonReintentar = document.createElement("button");
-  botonReintentar.textContent = "REINTENTAR";
+  botonReintentar.textContent = "REINTENTAR BOT";
   botonReintentar.className = "boton-menu";
   botonReintentar.style.marginTop = "1rem";
   botonReintentar.onclick = () => {
@@ -297,4 +297,5 @@ console.log("Sistema de vida con corazones cargado");
 console.log("Vida máxima: " + vidaMaxima + " corazones");
 
 console.log(" Video de muerte activado");
+
 
