@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Last Sheriff - Demo</title>
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="1.css">
+</head>
+<body>
+  <!-- MENÚ PRINCIPAL -->
+  <div id="menu-principal">
+    <h1 class="titulo-juego">THE LAST SHERIFF</h1>
+    <div class="menu-botones">
+      <button class="boton-menu" id="btn-jugar">JUGAR</button>
+      <button class="boton-menu" id="btn-cargar">CARGAR PARTIDA</button>
+      <button class="boton-menu" id="btn-creditos">CRÉDITOS</button>
+      <button class="boton-menu" id="btn-datos">DATOS DEL JUEGO</button>
+    </div>
+  </div>
+  <!-- PANTALLA DE CRÉDITOS -->
+  <div id="pantalla-creditos">
+    <div class="creditos-contenido">
+      <h2>CRÉDITOS</h2>
+      <p><strong>THE LAST SHERIFF</strong></p>
+      <p>DESARROLLADORES</p>
+      <p>B-2, emerson, angelo, JOSWEXD</p>
+      <p><br>Desarrolladora 117</p>
+      <p><br><strong>Controles Del juego</strong></p>
+      <p>A/D - Movimiento izquierda/derecha</p>
+      <p>1 - Sacar arma</p>
+      <p>F - Disparar</p>
+      <p>R - para Recargar</p>
+      <p>E - Hablar con NPC</p>
+      <p>3 - Congelar enemigos (10 seg)</p>
+      <p>Espacio para saltar</p>
+      <button class="boton-volver" id="btn-volver-creditos">Volver Al Menu</button>
+    </div>
+  </div>
+ 
+  <!-- ÁREA DE JUEGO -->
+  <div id="game-area">
+    <div id="cielo"></div>
+    <div id="montañas"></div>
+    <div id="suelo"></div>
+    <img id="player" src="Cowboy4_idle without gun_3.png" alt="player">
+  </div>
+
+  <!-- Botón para volver al menú desde el juego -->
+  <button class="boton-menu-juego" id="btn-menu-desde-juego">MENÚ</button>
+
+  <!-- Mensaje de guardado -->
+  <div class="mensaje-guardado" id="mensaje-guardado">¡Partida guardada!</div>
+
+  <!--  SCRIPTS EN ORDEN CORRECTO -->
+   <script src="7.js"></script>  <!-- ← PRIMERO el sistema de vida -->
+<script src="3.js"></script>  <!-- ← Enemigos -->
+<script src="6.js"></script>  <!-- ← Jefe -->
+<script src="5.js"></script>  <!-- ← NPC -->
+<script src="4.js"></script>
+</body>
+</html>

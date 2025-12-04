@@ -1,0 +1,371 @@
+body {
+  background-color: #2b1d10;
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Georgia', serif;
+}
+
+/* ============================================ */
+/* MENÚ PRINCIPAL */
+/* ============================================ */
+#menu-principal {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("ac251eeb-1245-4b39-b7cf-fec0d85cfd0f.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+#menu-principal.oculto {
+  display: none;
+}
+
+/*  TÍTULO CON FUENTE GÓTICA/MEDIEVAL */
+.titulo-juego {
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: 4.5rem;
+  color: #ffffff;
+  text-shadow: 
+    0 0 15px rgba(255, 255, 255, 0.9),
+    0 0 30px rgba(255, 255, 255, 0.6),
+    5px 5px 0px rgba(0, 0, 0, 0.9);
+  margin-bottom: 3rem;
+  font-weight: normal;
+  letter-spacing: 6px;
+  animation: pulse 2s infinite;
+  text-align: center;
+  line-height: 1.2;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.menu-botones {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/*  BOTONES CON FUENTE PIXELADA */
+.boton-menu {
+  font-family: 'Press Start 2P', cursive;
+  background: linear-gradient(to bottom, #8B4513, #654321);
+  color: #f0d506;
+  border: 3px solid #000000;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+  font-weight: normal;
+  border-radius: 8px;
+  min-width: 300px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.boton-menu:hover {
+  background: linear-gradient(to bottom, #A0522D, #8B4513);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+}
+
+/* ============================================ */
+/* PANTALLA DE CRÉDITOS */
+/* ============================================ */
+#pantalla-creditos {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #1a1a1a 0%, #2b1d10 100%);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  color: #ffffff;
+}
+
+#pantalla-creditos.visible {
+  display: flex;
+}
+
+.creditos-contenido {
+  text-align: center;
+  max-width: 600px;
+  padding: 2rem;
+}
+
+.creditos-contenido h2 {
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+  color: #f0d506;
+}
+
+.creditos-contenido p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.8;
+}
+
+.boton-volver {
+  font-family: 'Press Start 2P', cursive;
+  background: linear-gradient(to bottom, #8B4513, #654321);
+  color: #FFD700;
+  border: 3px solid #FFD700;
+  padding: 0.8rem 1.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: all 0.3s;
+  font-weight: normal;
+  border-radius: 8px;
+}
+
+.boton-volver:hover {
+  background: linear-gradient(to bottom, #A0522D, #8B4513);
+  transform: scale(1.1);
+}
+
+/* ============================================ */
+/* ÁREA DEL JUEGO */
+/* ============================================ */
+#game-area {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: none;
+  background-color: #87CEEB;
+}
+
+#game-area.activo {
+  display: block;
+}
+
+/*  CIELO - Imagen del cielo con nubes (FIJO) */
+#cielo {
+  width: 100%;
+  height: 100vh;
+  background-image: url("Gemini_Generated_Image_1olla71olla71oll.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  image-rendering: pixelated;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/*  MONTAÑAS - Imagen de las montañas en la parte inferior (FIJO) */
+#montañas {
+  width: 100%;
+  height: 40vh;
+  background-image: url("montañas.png");
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  z-index: 1;
+}
+
+/*  SUELO - Una sola fila de bloques (SE MUEVE) */
+#suelo {
+  width: 400%;
+  height: 100px;
+  background-image: url("Gemini_Generated_Image_mqxhb8mqxhb8mqxh.png");
+  background-size: auto 100px;
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  image-rendering: pixelated;
+  position: absolute;
+  bottom: 0;
+  left: -150%;
+  z-index: 2;
+  background-color: #8B4513;
+  /*  SIN TRANSICIÓN - Movimiento instantáneo */
+  transition: none;
+}
+
+/*  PERSONAJE */
+#player {
+  width: 85px;
+  height: 80px;
+  position: absolute;
+  left: 100px;
+  bottom: 100px;
+  z-index: 10;
+  transition: bottom 0.1s ease-out;
+}
+
+/*  BALAS */
+.bala {
+  width: 20px;
+  height: 7px;
+  background: rgb(255, 238, 0);
+  position: absolute;
+  border-radius: 50%;
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(255, 255, 0, 0.8);
+}
+
+/* ============================================ */
+/* CABALLO ÉPICO PROYECTIL  */
+/* ============================================ */
+.caballo-proyectil {
+  position: absolute;
+  z-index: 15;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.8));
+  animation: caballoGlow 0.5s infinite alternate;
+}
+
+@keyframes caballoGlow {
+  0% { 
+    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.8)) brightness(1);
+  }
+  100% { 
+    filter: drop-shadow(0 0 40px rgba(255, 165, 0, 1)) brightness(1.3);
+  }
+}
+
+/* ============================================ */
+/* CASAS Y EDIFICIOS */
+/* ============================================ */
+.casa {
+  position: absolute;
+  z-index: 3;
+  image-rendering: pixelated;
+  /*  SIN TRANSICIÓN - Movimiento instantáneo */
+  transition: none;
+}
+
+/* ============================================ */
+/* DECORACIONES ANIMADAS (VIDEOS/GIFS) */
+/* ============================================ */
+.decoracion-animada {
+  position: absolute;
+  z-index: 4;
+  image-rendering: pixelated;
+  transition: opacity 1s;
+  object-fit: contain;
+}
+
+/* ============================================ */
+/* ENEMIGOS */
+/* ============================================ */
+.enemigo {
+  position: absolute;
+  z-index: 9;
+  image-rendering: pixelated;
+  /*  SIN TRANSICIÓN - Movimiento instantáneo */
+  transition: none;
+}
+
+.bala-enemigo {
+  width: 20px;
+  height: 7px;
+  background: rgb(255, 100, 0);
+  position: absolute;
+  border-radius: 50%;
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(255, 100, 0, 0.8);
+}
+
+/* ============================================ */
+/* CONTADOR DE BALAS  */
+/* ============================================ */
+.contador-balas {
+  font-family: 'Press Start 2P', cursive;
+  position: fixed;
+  top: 80px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffc400f5;
+  padding: 1rem 1.5rem;
+  border: 3px solid #ffea00;
+  border-radius: 8px;
+  font-size: 1rem;
+  z-index: 1500;
+  display: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* ============================================ */
+/* BOTÓN DE MENÚ EN EL JUEGO */
+/* ============================================ */
+.boton-menu-juego {
+  font-family: 'Press Start 2P', cursive;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: rgba(139, 69, 19, 0.9);
+  color: #FFD700;
+  border: 2px solid #FFD700;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 1500;
+  display: none;
+  font-weight: normal;
+}
+
+.boton-menu-juego.visible {
+  display: block;
+}
+
+.boton-menu-juego:hover {
+  background: rgba(160, 82, 45, 1);
+  transform: scale(1.05);
+}
+
+/* ============================================ */
+/* MENSAJE DE GUARDADO */
+/* ============================================ */
+.mensaje-guardado {
+  font-family: 'Press Start 2P', cursive;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(34, 139, 34, 0.95);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: normal;
+  z-index: 3000;
+  display: none;
+  animation: fadeInOut 2s;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-20px); }
+  20% { opacity: 1; transform: translateY(0); }
+  80% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-20px); }
+}
+
+.mensaje-guardado.visible {
+  display: block;
+}
