@@ -62,7 +62,7 @@ const ENEMIGO_CONFIG = {
 // ============================================
 const LIMITES_MAPA = {
   izquierdo: -500,    // Límite izquierdo relativo al worldOffset
-  derecho: 5500       // Límite derecho relativo al worldOffset
+  derecho: 500       // Límite derecho relativo al worldOffset
 };
 
 // ============================================
@@ -598,3 +598,4 @@ console.log(" Límites del mapa configurados: -500 a 5500");
 console.log(" Configuración: 20 enemigos totales, 5 cada 15 segundos");
 
 console.log(" Sistema de congelamiento activado - Presiona 3 para congelar enemigos por 10 segundos");
+
