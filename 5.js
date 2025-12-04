@@ -247,7 +247,7 @@ function mostrarCreditos() {
 }
 
 function mostrarDatosJuego() {
-  alert(`THE LAST SHERIFF - DEMO\n\n• Movimiento: A/D o Flechas\n• Sacar arma: 1\n• Disparar: F\n• Recargar: R\n• Hablar con NPC: E\n• Saltar: W o Espacio\n•  Congelar enemigos: 3 (10 seg)\n\n💚 VIDA: 5 corazones\n🐴 ÚLTIMA BALA = CABALLO ÉPICO!\n\n¡Buena suerte, Sheriff!`);
+  alert(`THE LAST SHERIFF - DEMO\n\n• Movimiento: A/D o Flechas\n• Sacar arma: 1\n• Disparar: F\n• Recargar: R\n• Hablar con NPC: E\n• Saltar: W o Espacio\n•  Congelar enemigos: 3 (10 seg)\n\n VIDA: 5 corazones\n ÚLTIMA BALA = CABALLO ÉPICO!\n\n¡Buena suerte, Sheriff!`);
 }
 
 function volverAlMenu() {
@@ -604,5 +604,6 @@ console.log("Controles: A/D, 1 Arma, F Disparar, R Recargar, E Hablar, W Saltar"
 console.log(" Presiona 3 para congelar enemigos por 10 segundos");
 
 console.log(" Presiona E cerca del NPC para hablar");
+
 
 
