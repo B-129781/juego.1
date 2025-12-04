@@ -59,7 +59,7 @@ const fuerzaSalto = -15;
 const alturaSuelo = 100;
 
 // Sistema de munición
-const balasMaximas = 6;
+const balasMaximas = 100;
 let balasActuales = balasMaximas;
 let recargando = false;
 let teclaRPresionada = false;
@@ -602,4 +602,5 @@ document.addEventListener("click", function iniciarAudio() {
 console.log("🎮 THE LAST SHERIFF - Juego cargado correctamente");
 console.log("🎯 Controles: A/D, 1 Arma, F Disparar, R Recargar, E Hablar, W Saltar");
 console.log("❄️ Presiona 3 para congelar enemigos por 10 segundos");
+
 console.log("💬 Presiona E cerca del NPC para hablar");
