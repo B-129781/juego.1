@@ -298,7 +298,7 @@ class Enemigo {
       this.x -= this.velocidad * 0.3;
     }
     
-    // 🚧 APLICAR LÍMITES DEL MAPA - Sistema simplificado
+    //  APLICAR LÍMITES DEL MAPA - Sistema simplificado
     const limiteIzq = -500;
     const limiteDer = 5500;
     
@@ -532,7 +532,7 @@ function recibirDañoJugador() {
     if (invulnerable || vidaActual <= 0) return;
 
     vidaActual--;
-    console.log(`💔 El jugador recibió daño! Vida: ${vidaActual}/${vidaMaxima}`);
+    console.log(` El jugador recibió daño! Vida: ${vidaActual}/${vidaMaxima}`);
 
     // Audio de daño
     if (typeof audioDañoJugador !== 'undefined') {
@@ -596,4 +596,5 @@ function limpiarSistemaEnemigos() {
 console.log(" Sistema de enemigos cargado correctamente");
 console.log(" Límites del mapa configurados: -500 a 5500");
 console.log(" Configuración: 20 enemigos totales, 5 cada 15 segundos");
+
 console.log(" Sistema de congelamiento activado - Presiona 3 para congelar enemigos por 10 segundos");
